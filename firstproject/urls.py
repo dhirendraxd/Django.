@@ -17,6 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
 urlpatterns = [
+    path('', home , name="home"),
+    path ('contact/',contact, name="contact"),
+    path('about/',about ,name="about")
+path("sucess-page/',sucess_page,name='sucess_page"),
+
+
     path('admin/', admin.site.urls),
+
 ]

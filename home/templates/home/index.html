@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django</title>
+</head>
+<body>
+    <script>console.log("hey this is an log comment ")
+    </script>
+<style>
+    table, th, td{
+border: 1px solid black;
+}
+
+</style>
+
+{% extends "base.html" %}
+{ % block start % }
+
+
+<h1>this is index page
+
+</h1>
+<a href="/contact/">contact</a>
+<a href="/about/">about</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>can vote</th>
+        </tr>
+    </thead>
+    {% for people in peoples%}
+    <tbody>
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{people.name}}</td>
+            <td>{{people.age}}</td>
+            <td>{
+            % if people.age>=18%}
+
+            { % else % }
+               ****
+            {% endif %}
+            </td>
+        </tr>
+        
+    </tbody>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+<p>{{text| truncatechars :80}}</p>
+<!-- this above will slice the extra words and willonly display only 80 words inthe paragraph  -->
+
+<!-- truncatechars is used to show the small part of the data  or text hence it can be fully seen in the next page  -->
+
+
+<p>
+    {% if "cucumber" in vegetables % }
+    
+    yes available 
+    {
+        % elif "tomato " in vegetables %
+    }
+
+    {
+        % elseif %
+    }
+    not available
+    {
+        % endif %
+    }
+</p>
+<!--  the above code show if the given vegetable is in the vegetables list -->
+{{
+    vegetables.firstof
+}}
+
+
+
+
+
+
+<!--     
+    <h1>Lorem ipsum dolor sit .</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptatum eligendi iusto possimus quo dolor necessitatibus, provident animi impedit iure veniam molestiae! Quidem!</p> -->
+
+</body>
+</html>
