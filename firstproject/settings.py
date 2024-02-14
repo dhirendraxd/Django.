@@ -38,8 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'home',  # Add 'home' application here
+    'home', 
+    'vege'
+    # Add 'home' application here
 ]
+
+
+# EXTERNAL_APPS =[
+#     'accounts',
+#     'home',
+#     'vege'
+# ]
+# INSTALLED_APPS += EXTERNAL_APPS
+
+# so instead of the above process we have to add the new ones into the installed apps  as above done 
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
