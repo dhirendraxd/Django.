@@ -17,5 +17,11 @@ def receipes(request):
         
         
         return redirect('/receipe')
+    
+    
+    
+    queryset=Receipe.object.all()
+    context = {'receipes': queryset}
+
         
-    return render(request, 'receipes.html')
+    return render(request, 'receipes.html' ,context)
