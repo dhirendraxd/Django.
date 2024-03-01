@@ -2,7 +2,8 @@ Certainly! Here's a template for a Django repository README.md file:
 
 ---
 
-# Django Project Name
+# learning django
+
 
 Description of your project goes here.
 
